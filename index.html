@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7ed">
+  <meta name="description" content="A silly, just-for-fun meow translator demo.">
+  <title>Meow Translator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="translator">
+    <div class="sparkle sparkle-one" aria-hidden="true">✦</div>
+    <div class="sparkle sparkle-two" aria-hidden="true">✧</div>
+
+    <header class="intro">
+      <div class="cat-mark" aria-hidden="true">
+        <svg viewBox="0 0 96 96" role="img">
+          <path d="M17 37 15 13l22 13a39 39 0 0 1 22 0l22-13-2 24a34 34 0 1 1-62 0Z" fill="#ffb58f"/>
+          <path d="m25 35-2-12 12 7a36 36 0 0 0-10 5Zm46 0 2-12-12 7a36 36 0 0 1 10 5Z" fill="#f28e78"/>
+          <path d="M31 49a4 5 0 1 0 8 0 4 5 0 0 0-8 0Zm26 0a4 5 0 1 0 8 0 4 5 0 0 0-8 0Z" fill="#493b53"/>
+          <path d="m45 57 3 3 3-3-3-2-3 2Z" fill="#ef8f94"/>
+          <path d="M48 59c0 5-7 7-10 3m10-3c0 5 7 7 10 3" fill="none" stroke="#493b53" stroke-linecap="round" stroke-width="2.5"/>
+          <path d="m33 58-13-2m13 7-12 3m42-8 13-2m-13 7 12 3" fill="none" stroke="#493b53" stroke-linecap="round" stroke-width="2"/>
+        </svg>
+      </div>
+      <p class="eyebrow">A tiny bit of cat-versation</p>
+      <h1>Meow Translator</h1>
+      <p class="subtitle">What’s your cat <em>probably</em> saying?</p>
+    </header>
+
+    <section class="translator-card" aria-labelledby="prompt-heading">
+      <div class="card-topline" aria-hidden="true">
+        <span></span><span></span><span></span>
+        <span class="card-label">CAT CHAT · JUST FOR FUN</span>
+      </div>
+      <div class="card-content">
+        <div class="sound-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32">
+            <path d="M16 20a4 4 0 0 0 4-4V9a4 4 0 0 0-8 0v7a4 4 0 0 0 4 4Zm-7-5v1a7 7 0 0 0 14 0v-1m-7 8v4m-5 0h10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
+        </div>
+        <h2 id="prompt-heading">Ready for a meow?</h2>
+        <p class="instruction">Give us your best “meow” and we’ll make a very silly guess.</p>
+        <button class="record-button" id="record-button" type="button">
+          <span class="button-dot" aria-hidden="true"></span>
+          <span id="button-label">Record a meow</span>
+        </button>
+        <p class="privacy-note">
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M10 2.5 4 5v4.4c0 4 2.5 6.7 6 8.1 3.5-1.4 6-4.1 6-8.1V5l-6-2.5Zm-2.2 7.6 1.5 1.5 3.2-3.4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/>
+          </svg>
+          Audio stays right here. We don’t save, upload, or analyze it.
+        </p>
+      </div>
+    </section>
+
+    <section class="result-card" aria-labelledby="result-heading">
+      <div class="result-heading">
+        <span class="result-paw" aria-hidden="true">🐾</span>
+        <h2 id="result-heading">The cat says…</h2>
+      </div>
+      <p class="result-text" id="result" role="status" aria-live="polite" aria-atomic="true">Your very official (not really) translation will appear here.</p>
+    </section>
+
+    <p class="disclaimer">
+      <span aria-hidden="true">😸</span>
+      This is a playful demo, not a real translation of cat language.
+    </p>
+  </main>
+</body>
+</html>
